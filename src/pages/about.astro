@@ -1,0 +1,34 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = 'About x';
+//import 
+//import BASE_URL from 'import.meta.env';
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const operatingSystem = 'Linux';
+
+const skillColor = 'blue';
+const fontWeight = 'bold';  
+const textCase = 'uppercase';
+
+---
+<Layout pageTitle="About">
+    
+    <a href="/about">{pageTitle}</a>
+	<div>So what?</div>
+    {operatingSystem === 'Linux' ? (
+        <p>You're using Linux! Great choice for web development.</p>
+    ) : (
+        <p>You're using {operatingSystem}. Consider switching to Linux for a better web development experience.</p>
+    )}
+
+  <style define:vars={{skillColor, fontWeight, textCase}}>
+  .skill {
+    color: var(--skillColor);
+    font-weight: var(--fontWeight);
+    text-transform: var(--textCase);
+  }
+  </style>
+
+</Layout>
