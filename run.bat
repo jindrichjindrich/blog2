@@ -29,6 +29,9 @@ goto end
 git remote add origin git@github.com:jindrichjindrich/blog2.git
 goto end
 
+:github_deploy_info
+start https://docs.astro.build/en/guides/deploy/github/
+goto end
 
 :help
 echo Usage: run ACTION
@@ -38,6 +41,8 @@ echo   dev ... start npm run dev
 echo   gui ... start http://localhost:4321
 echo   tutorial ... open tutorial web page
 echo   github_remote ... add github remote repo
+echo   github_deploy_info ... open doc page about deploying
+
 goto end
 
 :end
